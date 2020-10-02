@@ -1,7 +1,7 @@
 # ChatSSE
-Simple chat with SSE in java
---------------------------------
-Files:
+This is a simple chat done with SSE in java.
+
+## Files:
 <p>
 <ul>
 	<li>index.html: contains the code for creating the interface and calls functions:</li>
@@ -15,3 +15,9 @@ Files:
 	<li>checkMsg.java: servlet for checking if there's any new messages and, if so, sending them through event stream.</li>
 	
 </ul>
+
+## Useful resources 
+These are some of the most useful resources I used while coding this example.
+
+  - W3schools: https://www.w3schools.com/html/html5_serversentevents.asp
+  - StackOverflow: https://stackoverflow.com/questions/12752337/how-implement-generic-server-sent-events-servlet
