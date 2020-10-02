@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<web-app>
+
+<servlet>
+  <servlet-name>checkMsg</servlet-name>
+  <servlet-class>checkMsg</servlet-class>
+</servlet>
+<servlet>
+  <servlet-name>sendMsg</servlet-name>
+  <servlet-class>sendMsg</servlet-class>
+</servlet>
+
+<servlet-mapping>
+  <servlet-name>checkMsg</servlet-name>
+  <url-pattern>/checkMsg</url-pattern>
+</servlet-mapping>
+<servlet-mapping>
+  <servlet-name>sendMsg</servlet-name>
+  <url-pattern>/sendMsg</url-pattern>
+</servlet-mapping>
+
+</web-app>
