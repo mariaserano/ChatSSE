@@ -4,14 +4,13 @@ import javax.servlet.http.*;
 
 public class sendMsg extends HttpServlet {
 	
-	
 	public void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException{		
 	
 		// Set response content type
-        response.setContentType("text/html");
+                response.setContentType("text/html");
 		response.setCharacterEncoding("UTF-8");
 		
-        PrintWriter out = null;
+                PrintWriter out = null;
 		
 		//Get message and username values
 		String msg = request.getParameter("msg");
@@ -33,16 +32,15 @@ public class sendMsg extends HttpServlet {
 		Item.messageUsername.addElement(username);
 		Item.number = Item.number + 1;
 		
-        try {
-            out = response.getWriter();
-        } catch (IOException io) {
-            System.out.println("Exception creating PrintWriter");
-        }
+                try {
+             	    out = response.getWriter();
+                } catch (IOException io) {
+                    System.out.println("Exception creating PrintWriter");
+                }
 		
 		//AJAX, show the user that sent the message that it was sent correctly
 		String next = "Sent!";
 		out.write(next);
 		out.flush();
-		
 	}
 }
