@@ -4,26 +4,25 @@ import javax.servlet.http.*;
 
 public class checkMsg extends HttpServlet {
 	
-	
 	public void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException{		
 	
 		// Initialize lastValue for each student running the servlet
 		int lastValue=-1;
 		
 		// Set response content type
-        response.setContentType("text/event-stream");
+       	        response.setContentType("text/event-stream");
 		response.setCharacterEncoding("UTF-8");
 		
-        PrintWriter out = null;
+                 PrintWriter out = null;
 		
 		// Get username for explanation matters
 		String username = request.getParameter("username");
 	
-        try {
-            out = response.getWriter();
-        } catch (IOException io) {
-            System.out.println("Exception creating PrintWriter");
-        }
+     	        try {
+                        out = response.getWriter();
+                } catch (IOException io) {
+                        System.out.println("Exception creating PrintWriter");
+                }
 		
 		// Uncomment for checking that each user joining the group starts with no messages read 
 		/* System.out.println("NEW CONNECTION: Array length is: " + Item.messageQueue.size());
@@ -37,11 +36,10 @@ public class checkMsg extends HttpServlet {
 				out.flush();
 				lastValue++;
 			}
+			
 			try{
 				Thread.sleep(2000);  //Change for faster replies
-			}
-			catch(InterruptedException ex)
-			{
+			} catch(InterruptedException ex) {
 				Thread.currentThread().interrupt();
 			}
 			
